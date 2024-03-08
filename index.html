@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtomoVideo: High Fidelity Image-to-Video Generation</title>
+
+  <style>
+    .news-section {
+      width: 80%; 
+      max-width: 600px; 
+      margin: 0px auto 10px;;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      text-align: left;
+    }
+  
+    .news-section ol {
+        list-style: none;
+        padding: 0;
+    }
+  
+    .news-section li {
+        margin-bottom: 8px; 
+    }
+  
+    .news-section li:before {
+        content: "[" attr(data-date) "] ";
+        font-weight: bold;
+    }
+  
+    .news-item {
+        display: inline;
+        margin-left: 5px;
+    }
+    </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+      </div>
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          AtomoVideo:
+        </h1>
+        <h3 class="title is-3 publication-title">
+          High Fidelity Image-to-Video Generation
+        </h3>
+        <div class="is-size-5 publication-authors">
+          <div class="author-block">Litong Gong*, </div>
+          <div class="author-block">Yiran Zhu*, </div>
+          <div class="author-block">Weijie Li*, </div>
+          <div class="author-block">Xiaoyang Kang*, </div>
+          <div class="author-block">Biao Wang, </div>
+          <div class="author-block">Tiezheng Ge, </div>
+          <div class="author-block">Bo Zheng </div>       
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">Alibaba Inc.</span>
+          <span class="author-block">&nbsp&nbsp<sup>*</sup>Equal Contribution</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.01800"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+            </span>
+            <!-- YouTube Link. -->
+            <span class="link-block">
+              <a href="https://www.youtube.com/embed/36JIlk-U-vQ"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>YouTube</span>
+              </a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2, columns is-centered">One-minute Video</h2>
+    <p style="margin-bottom: 0.5em;">
+      AtomoVideo is a novel high-fidelity image-to-video (I2V) generation framework that generates high-fidelity video from input images, achieves better motion intensity and consistency than existing work, and is compatible with various personalized T2I models without specific tuning.
+    </p>
+    <iframe width="960" height="540"  src="https://www.youtube.com/embed/36JIlk-U-vQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2, columns is-centered">Image-to-Video Examples</h2>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/18.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/18.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/19.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/19.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/1.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/1.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/2.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/2.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/3.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/3.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/13.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/13.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/5.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/5.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/6.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/6.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/7.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/7.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/8.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/8.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td><img src="assets/i2v/square_video/9.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/9.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><img src="assets/i2v/square_video/10.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/square_video/10.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td style="width: 25%"><img src="assets/i2v/long_video/1.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/1.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><img src="assets/i2v/long_video/2.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/2.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td style="width: 25%"><img src="assets/i2v/long_video/3.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/3.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><img src="assets/i2v/long_video/4.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/4.mp4"></video></td>
+        </tr>
+      </table>
+
+      <table class="center">
+        <tr>
+          <td style="width: 25%"><img src="assets/i2v/long_video/5.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/5.mp4"></video></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><img src="assets/i2v/long_video/6.png" /></td>
+          <td style="padding-left: 5px; padding-right: 5px;"></td>
+          <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/i2v/long_video/6.mp4"></video></td>
+        </tr>
+      </table>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2, columns is-centered">Comparisons with Other Methods</h2>
+
+    <table class="center">
+      <tr>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>Image</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>AtomoVideo</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Gen-2</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Pika 1.0</b></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td style="width: 25%"><img src="assets/comparisons/2.png" /></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/2-atomovideo.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/2-gen2.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/2-pika.mp4"></video></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>Image</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>AtomoVideo</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Gen-2</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Pika 1.0</b></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td style="width: 25%"><img src="assets/comparisons/1.png" /></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/1-atomovideo.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/1-gen2.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/1-pika.mp4"></video></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>Image</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>AtomoVideo</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Gen-2</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Pika 1.0</b></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td style="width: 25%"><img src="assets/comparisons/3.png" /></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/3-atomovideo.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/3-gen2.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/3-pika.mp4"></video></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>Image</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td rowspan="2" style="width: 25%; text-align:center; font-size: 1.2em;"><b>AtomoVideo</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Gen-2</b></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%; text-align:center; font-size: 1.2em;"><b>Pika 1.0</b></td>
+      </tr>
+    </table>
+
+    <table class="center">
+      <tr>
+        <td style="width: 25%"><img src="assets/comparisons/4.png" /></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/4-atomovideo.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/4-gen2.mp4"></video></td>
+        <td style="padding-left: 5px; padding-right: 5px;"></td>
+        <td style="width: 25%"><video muted autoplay="autoplay" loop="loop" playsinline src="assets/comparisons/4-pika.mp4"></video></td>
+      </tr>
+    </table>
+
+    <br>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recently, video generation has achieved significant rapid development based on superior text-to-image generation techniques. In this work, we propose a high fidelity framework for image-to-video generation, named AtomoVideo. Based on multi-granularity image injection, we achieve higher fidelity of the generated video to the given image. In addition, thanks to high quality datasets and training strategies, we achieve greater motion intensity while maintaining superior temporal consistency and stability. Our architecture extends flexibly to the video frame prediction task, enabling long sequence prediction through iterative generation. Furthermore, due to the design of adapter training, our approach can be well combined with existing personalised models and controllable modules. By quantitatively and qualitatively evaluation, AtomoVideo achieves superior results compared to popular methods. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+        <h2 class="title is-2, columns is-centered">Framework</h2>
+      <br>
+      <h2 class="subtitle has-text-justified">
+        <figure style="width: 100%;">
+          <a href="assets/figures/framework.jpg">
+              <img width="100%" src="assets/figures/framework.jpg">
+          </a>
+        </figure>
+      </h2>
+    </div>
+  </div>
+  The framework of our image-to-video method. We use the pre-trained T2I model, newly added 1D temporal convolution and temporal attention modules after every spatial convolution and attention layer, with fixed T2I model parameters and only training the added temporal layer. Meanwhile, in order to inject the image information, we modify the input channel to 9 channels, add the image condition latent and binary mask. Since the input concatenate image information is only encoded by VAE, it represents low-level information, which contributes to the enhancement of fidelity of the video with respect to the given image. Meanwhile, we also inject high-level image semantic in the form of cross-attention to achieve more semantic image controllability.
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container content is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{atomovideo,
+      title={AtomoVideo: High Fidelity Image-to-Video Generation},
+      author={Gong, Litong and Zhu, Yiran and Li, Weijie and Kang, Xiaoyang and Wang, Biao and Ge, Tiezheng and Zheng, Bo},
+      year={2024},
+      eprint={arXiv:2403.01800},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/******.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <div class="content">
+          <p>
+             The source code of this webpage is based on the <a href="https://github.com/nerfies/nerfies.github.io/"> Nerfies</a> project webpage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
